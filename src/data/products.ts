@@ -1,0 +1,133 @@
+import { Product } from "@/contexts/CartContext";
+import luxuryImg from "@/assets/collection-luxury.jpg";
+import smartImg from "@/assets/collection-smart.jpg";
+import casualImg from "@/assets/collection-casual.jpg";
+import classicImg from "@/assets/collection-classic.jpg";
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Royal Chronograph",
+    price: 3748500,
+    priceDisplay: "₦3,748,500",
+    rating: 4.9,
+    reviews: 128,
+    image: luxuryImg,
+    badge: "Best Seller",
+    description: "Exquisite luxury timepiece featuring Swiss automatic movement, sapphire crystal, and 18k gold accents.",
+    category: "luxury",
+    features: ["Swiss Movement", "Sapphire Crystal", "Water Resistant 100m", "18k Gold Accents"],
+  },
+  {
+    id: 2,
+    name: "Tech Elite Pro",
+    price: 898500,
+    priceDisplay: "₦898,500",
+    rating: 4.7,
+    reviews: 89,
+    image: smartImg,
+    badge: "New Arrival",
+    description: "Advanced smartwatch with health tracking, GPS, and seamless smartphone integration.",
+    category: "smart",
+    features: ["Heart Rate Monitor", "GPS Tracking", "7-Day Battery", "Water Resistant 50m"],
+  },
+  {
+    id: 3,
+    name: "Urban Classic",
+    price: 598500,
+    priceDisplay: "₦598,500",
+    rating: 4.8,
+    reviews: 156,
+    image: casualImg,
+    badge: null,
+    description: "Versatile everyday watch with clean design and reliable quartz movement.",
+    category: "casual",
+    features: ["Quartz Movement", "Leather Strap", "Date Display", "Water Resistant 30m"],
+  },
+  {
+    id: 4,
+    name: "Heritage Dress",
+    price: 2848500,
+    priceDisplay: "₦2,848,500",
+    rating: 4.9,
+    reviews: 203,
+    image: classicImg,
+    badge: "Trending",
+    description: "Timeless elegance with mechanical movement and vintage-inspired design.",
+    category: "classic",
+    features: ["Mechanical Movement", "Alligator Strap", "Exhibition Back", "Water Resistant 50m"],
+  },
+  {
+    id: 5,
+    name: "Expedition Pro",
+    price: 1348500,
+    priceDisplay: "₦1,348,500",
+    rating: 4.6,
+    reviews: 92,
+    image: casualImg,
+    badge: null,
+    description: "Rugged adventure watch built for extreme conditions with superior durability.",
+    category: "casual",
+    features: ["Shock Resistant", "Compass", "Altimeter", "Water Resistant 200m"],
+  },
+  {
+    id: 6,
+    name: "Diamond Elite",
+    price: 7498500,
+    priceDisplay: "₦7,498,500",
+    rating: 5.0,
+    reviews: 67,
+    image: luxuryImg,
+    badge: "Premium",
+    description: "Ultimate luxury with diamond bezel and premium Swiss craftsmanship.",
+    category: "luxury",
+    features: ["Diamond Bezel", "Swiss Automatic", "Platinum Case", "Water Resistant 100m"],
+  },
+  {
+    id: 7,
+    name: "Sport Connect",
+    price: 673500,
+    priceDisplay: "₦673,500",
+    rating: 4.5,
+    reviews: 145,
+    image: smartImg,
+    badge: null,
+    description: "Fitness-focused smartwatch with comprehensive activity tracking and coaching.",
+    category: "smart",
+    features: ["Fitness Tracking", "Sleep Monitor", "Music Control", "5-Day Battery"],
+  },
+  {
+    id: 8,
+    name: "Metropolitan",
+    price: 1198500,
+    priceDisplay: "₦1,198,500",
+    rating: 4.7,
+    reviews: 118,
+    image: classicImg,
+    badge: null,
+    description: "Sophisticated dress watch perfect for formal occasions and business attire.",
+    category: "classic",
+    features: ["Automatic Movement", "Leather Strap", "Roman Numerals", "Water Resistant 30m"],
+  },
+  {
+    id: 9,
+    name: "Voyager Chrono",
+    price: 1948500,
+    priceDisplay: "₦1,948,500",
+    rating: 4.8,
+    reviews: 174,
+    image: luxuryImg,
+    badge: "Featured",
+    description: "Aviation-inspired chronograph with precision timing and pilot functionality.",
+    category: "luxury",
+    features: ["Chronograph", "Tachymeter", "Steel Bracelet", "Water Resistant 100m"],
+  },
+];
+
+export const getProductById = (id: number): Product | undefined => {
+  return products.find((product) => product.id === id);
+};
+
+export const getProductsByCategory = (category: string): Product[] => {
+  return products.filter((product) => product.category === category);
+};
