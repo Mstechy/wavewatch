@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 220 40% 12%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 40% 12%;
+
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 90% 50%;
+    --accent-foreground: 220 40% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 40% 12%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --luxury-gold: 38 90% 50%;
+    --luxury-navy: 220 40% 12%;
+    --luxury-charcoal: 220 15% 20%;
+    --luxury-silver: 220 10% 80%;
+    
+    --gradient-luxury: linear-gradient(135deg, hsl(220 40% 12%) 0%, hsl(220 30% 18%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 90% 50%) 0%, hsl(45 100% 60%) 100%);
+    --gradient-hero: radial-gradient(circle at top right, hsl(220 40% 12% / 0.03) 0%, transparent 70%);
+    
+    --shadow-luxury: 0 20px 60px -15px hsl(220 40% 12% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(220 40% 12% / 0.12);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 35% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 35% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 38 90% 50%;
+    --primary-foreground: 220 40% 12%;
+
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 38 90% 50%;
+    --accent-foreground: 220 40% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 38 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
